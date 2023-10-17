@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        
+        my-works｜undefined
         
     </title>
 
-    <link rel="canonical" href="http://example.com/2023/10/16/如何成功使用脚手架运行vue项目/">
+    <link rel="canonical" href="http://example.com/my-works/">
 
     <!-- Bootstrap Core CSS -->
     
@@ -49,7 +49,7 @@
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="" class="animated fadeIn">
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "false" data-istags="false
 " data-ishome = "false" >
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -137,133 +137,166 @@
 </script>
 
 <!-- Main Content -->
-
-<!--only post-->
-
-
-<img class="wechat-title-img"
-     src="">
-
-
 <style>
-    
-    header.intro-header {
-        background-image: url('')
+    * {
+        /*border: thin red solid;*/
     }
 
-    
+    header .bg-header {
+        height: 560px;
+        background-color: #62A4FF;
+    }
+
+    /*头像*/
+    .bg-header .avatar img {
+        border-radius: 50%;
+        margin-top: 100px;
+        max-width: 170px;
+    }
+
+    .bg-header h1,
+    .bg-header h2 {
+        color: white;
+    }
+
+    /*姓名*/
+    .bg-header h1 {
+        letter-spacing: 2px;
+        text-shadow: 0 0 10px rgba(15, 15, 15, .3);
+    }
+
+    /*描述*/
+    .bg-header h2 {
+        font-size: 18px;
+        margin-top: 12px;
+    }
+
+    /*整个作品展示区*/
+    section .works-area {
+        margin-top: -150px;
+    }
+
+    .works-area .works-item {
+        border-radius: 2px;
+        border: 1px solid #eee8d5;
+        margin-bottom: 50px;
+        box-shadow: 8px 5px 10px rgba(0, 0, 0, .2);
+    }
+
+    .works-item-img {
+        margin: auto -26px;
+    }
+
+    .works-item-img img {
+        width: 100%;
+    }
+
+    .works-area .works-item {
+        background: white;
+        padding: 5px 25px;
+    }
+
+    .works-area .footer {
+        padding-top: 10px;
+        border-top: thin #eee solid;
+    }
+
+    .works-area .footer .btn {
+        padding: 7px 9px;
+        border-radius: 2px;
+        float: right;
+        margin: 8px 0;
+        text-transform: none;
+        font-size: 12px;
+        font-style: italic;
+        background: #0085a1;
+        border: none;
+        color: #fff;
+    }
+
+    .works-item .works-content {
+        padding-top: 15px;
+    }
+
+    .works-item .title {
+        padding-top: 6px;
+    }
+
+    .works-item .title h3 {
+        display: inline-block;
+        margin: 0 15px;
+        height: 33px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .works-item .title .title-date {
+        float: right;
+        font-size: 18px;
+    }
+
+    .works-item .use span {
+        display: inline-block;
+        font-size: 12px;
+        border-radius: 3px;
+        padding: 0 4px;
+        border: thin solid #795548;
+    }
+
+    .works-item .subtitle {
+        margin: 0;
+        font-size: 17px;
+    }
+
+    @media screen and (max-width: 400px) {
+        .works-item .footer .use {
+            font-size: 14px;
+        }
+
+        .works-item .works-item-img {
+            height: 200px;
+        }
+
+        .bg-header .avatar img {
+            max-width: 150px;
+        }
+
+        .bg-header h1 {
+            font-size: 24px;
+        }
+
+        section .works-area {
+            margin-top: -210px;
+        }
+    }
 </style>
 
-<header class="intro-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
-                <div class="post-heading">
-                    <h1></h1>
-                    
-                    <span class="meta">
-                         作者 nodesigle
-                        <span>
-                          日期 2023-10-16
-                         </span>
-                    </span>
-                    <div class="tags text-center">
-                        
-                        <br /><span id="busuanzi_container_page_pv" style="display:none;">阅读量：
-                            <span id="busuanzi_value_page_pv"></span>次</span>
-                    </div>
+<div class="works-container" style="background-color: #fafafa">
+    <header>
+        <div class="bg-header text-center">
+            <div class="profile">
+                <div class="avatar">
+                    <img src="">
+                </div>
+                <div class="personal-profile">
+                    <h1>
+                        nodesigle
+                    </h1>
+                    <h2>个人作品集</h2>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="post-title-haojen">
-        <span>
-            
-        </span>
-    </div>
-</header>
-
-<!-- Post Content -->
-<article>
+    </header>
     <div class="container">
-        <div class="row">
-            <!-- Post Container -->
-            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <p>title: 如何成功运行一个Vue项目</p>
-<p>date: 2023-10-15</p>
-<h2 id="1-安装Nodejs前端服务器"><a href="#1-安装Nodejs前端服务器" class="headerlink" title="1.安装Nodejs前端服务器"></a>1.安装Nodejs前端服务器</h2><ul>
-<li>Nodejs使用纯js代码写的前端服务器</li>
-<li>类似用java写的tomcat服务器一样</li>
-<li>进入<a target="_blank" rel="noopener" href="https://nodejs.cn/">nodejs官网</a>下载</li>
-</ul>
-<h2 id="2-Vue-CLI脚手架"><a href="#2-Vue-CLI脚手架" class="headerlink" title="2.Vue CLI脚手架"></a>2.Vue CLI脚手架</h2><h3 id="2-1什么是CLI"><a href="#2-1什么是CLI" class="headerlink" title="2.1什么是CLI"></a>2.1什么是CLI</h3><p>​		    CLI（command-line interface，<a target="_blank" rel="noopener" href="http://baike.baidu.com/view/5483485.htm">命令行界面</a>）是指可在<a target="_blank" rel="noopener" href="http://baike.baidu.com/view/200012.htm">用户</a>提示符下键入可执行指令的界面，它通常不支持鼠标，用户通过键盘输入指令，计算机接收到指令后，予以执行。</p>
-<h3 id="2-2什么是Vue-CLI"><a href="#2-2什么是Vue-CLI" class="headerlink" title="2.2什么是Vue CLI"></a>2.2什么是Vue CLI</h3><p>​		Vue CLI 是一个基于 Vue 进行快速项目开发的工具。它可以提供可交互式的项目<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E8%84%9A%E6%89%8B%E6%9E%B6&spm=1001.2101.3001.7020">脚手架</a>和运行时的服务依赖，帮助你快速完成一个风格统一、拓展性强的现代化 web 单页面应用。</p>
-<h3 id="2-3Vue-CLI优势"><a href="#2-3Vue-CLI优势" class="headerlink" title="2.3Vue CLI优势"></a>2.3Vue CLI优势</h3><ul>
-<li>通过 <span style="color:red">@vue&#x2F;cli</span> 实现的交互式的项目脚手架。</li>
-</ul>
-
-                <hr>
-                
-
-                <ul class="pager">
-                    
-                    <li class="previous">
-                        <a href="/2023/10/17/test博客/" data-toggle="tooltip" data-placement="top"
-                           title="hi 2023">&larr; Previous Post</a>
-                    </li>
-                    
-                    
-                    <li class="next">
-                        <a href="/2023/10/16/hello-world/" data-toggle="tooltip" data-placement="top"
-                           title="Hello World">Next Post &rarr;</a>
-                    </li>
-                    
-                </ul>
-
-                
-
-                
-
-
-                <!--加入新的评论系统-->
-                
-
-                
-
-            </div>
-
-            <div class="hidden-xs col-sm-3 toc-col">
-                <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85Nodejs%E5%89%8D%E7%AB%AF%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">1.安装Nodejs前端服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Vue-CLI%E8%84%9A%E6%89%8B%E6%9E%B6"><span class="toc-text">2.Vue CLI脚手架</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1%E4%BB%80%E4%B9%88%E6%98%AFCLI"><span class="toc-text">2.1什么是CLI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2%E4%BB%80%E4%B9%88%E6%98%AFVue-CLI"><span class="toc-text">2.2什么是Vue CLI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3Vue-CLI%E4%BC%98%E5%8A%BF"><span class="toc-text">2.3Vue CLI优势</span></a></li></ol></li></ol>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <!-- Sidebar Container -->
-
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
-
-                <!-- Featured Tags -->
-                
-
-                <!-- Friends Blog -->
+        <section class="row">
+            <div class="col-sm-10 col-sm-offset-1
+                        col-md-8 col-md-offset-2
+                      works-area">
                 
             </div>
-        </div>
-
+        </section>
     </div>
-</article>
-
-
-
-
-
-
-
+</div>
 <!-- Footer -->
 <!-- Footer -->
 <footer>

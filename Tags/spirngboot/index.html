@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        Tags｜nodesigle&#39;s blog
+        nodesigle&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="https://nodesigle.github.io/Tags/">
+    <link rel="canonical" href="https://nodesigle.github.io/tags/spirngboot/">
 
     <!-- Bootstrap Core CSS -->
     
@@ -49,7 +49,7 @@
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="" class="animated fadeIn">
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "false" data-istags="false
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "false" data-istags="true
 " data-ishome = "false" >
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -137,98 +137,153 @@
 </script>
 
 <!-- Main Content -->
-<style>
-    .intro-header .site-heading {
-        margin: 50px;
-    }
-    
-    header.intro-header {
-        background-image: url('https://raw.githubusercontent.com/nodesigle/image-hosting/main/nodePic.jpg')
-    }
-    
-</style>
+
 
 <!-- Page Header -->
-<header class="intro-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading text-center">
-                    <h1>Tags</h1>
-                    <span class="subheading"></span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-<!-- Main Content -->
-<div class="container">
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 visible-xs-block visible-sm-block">
     <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <!-- 标签云 -->
-            <div id='tag_cloud' class="tags">
-                
-                <a href="#Vue" title="Vue" rel="1">Vue</a>
-                
-                <a href="#spirngboot" title="spirngboot" rel="1">spirngboot</a>
-                
-                <a href="#hexo" title="hexo" rel="1">hexo</a>
-                
+        <header class="intro-header">
+            <div class="container">
+                <div class="site-heading text-center">
+                    <div class="about-me">
+                        <!--移动端头部显示-->
+                        <img src="https://raw.githubusercontent.com/nodesigle/image-hosting/main/QQ%E5%9B%BE%E7%89%8720231017213321.jpg"/>
+                        <h5><a href="/about/">nodesigle</a></h5>
+                        <p>技术为辅,快乐至上</p>
+                    </div>
+                </div>
             </div>
+        </header>
+    </div>
+</div>
+<!-- Main Content -->
+<div class="container custom-haojen-container">
+    <!-- Post Container -->
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
+            <!-- Main Content -->
 
-            <!-- 标签列表 -->
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="Vue">
-                    <span class="tag-text">Vue</span>
-                </span>
-                
-                <div class="post-preview">
-                    <a href="/2023/10/15/如何成功使用脚手架运行vue项目/">
-                        <h2 class="post-title">
-                            如何成功运行一个Vue项目
-                        </h2>
+
+
+<div class="post-preview "
+     style="background-image: url('https://raw.githubusercontent.com/nodesigle/image-hosting/main/nodePic.jpg')">
+    <a href="/2023/10/19/远程调用/">
+        <h2 class="post-title">
+            通过远程调用查天气
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2023-10-19
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                远程调用简称: RPC(Remote Procedure Call)
+两种实现方式
+webClient
+非阻塞、响应式HTTP客户端
+
+基于springboot的具体实现流程
+首先写一个远程调用服务类(里面包含webClinet的链式调用),其次在controller中自动注入这个类,书写相关配..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+
+<!-- 翻页 pager -->
+
+<ul class="pager">
+    
+    
+</ul>
+
+
+        </div>
+        <!-- Sidebar Container -->
+        <div class="
+                col-lg-3 col-lg-offset-0
+                col-md-3 col-md-offset-0
+                col-sm-12
+                col-xs-12
+                sidebar-container
+            ">
+
+            <!-- About Me -->
+            <section class="visible-md visible-lg" style="padding: 0 18px">
+                <div class="short-about">
+                    <!--侧边栏头像-->
+                    
+                    <img src="https://raw.githubusercontent.com/nodesigle/image-hosting/main/QQ%E5%9B%BE%E7%89%8720231017213321.jpg"/>
+                    
+                    <h5><a href="/about/">nodesigle</a></h5>
+                    
+                    <p>技术为辅,快乐至上</p>
+                    
+                    <hr>
+                    <!-- SNS Link 社交 -->
+                    <ul class="list-inline">
                         
-                    </a>
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="spirngboot">
-                    <span class="tag-text">spirngboot</span>
-                </span>
-                
-                <div class="post-preview">
-                    <a href="/2023/10/19/远程调用/">
-                        <h2 class="post-title">
-                            通过远程调用查天气
-                        </h2>
                         
-                    </a>
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="hexo">
-                    <span class="tag-text">hexo</span>
-                </span>
-                
-                <div class="post-preview">
-                    <a href="/2023/10/18/小白如何成功部署hexo博客/">
-                        <h2 class="post-title">
-                            小白如何成功部署hexo博客
-                        </h2>
                         
-                    </a>
+                        <li>
+                            <a target="_blank" href="https://www.zhihu.com/people/wang-qie-zi-10">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa  fa-stack-1x fa-inverse">知</i>
+                                        </span>
+                            </a>
+                        </li>
+                        
+
+                        
+
+                        
+
+                        
+                        <li>
+                            <a target="_blank" href="https://github.com/nodesigle">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                        </span>
+                            </a>
+                        </li>
+                        
+
+                        
+                    </ul>
                 </div>
-                <hr>
-                
-            </div>
+            </section>
+
+            <!-- Featured Tags  标签 -->
+            
+            <section>
+                <div class="tags">
+                    
+                    
+                    <a href="/tags/#Vue" title="Vue"
+                       rel="1">Vue</a>
+                    
+                    
+                    
+                    <a href="/tags/#spirngboot" title="spirngboot"
+                       rel="1">spirngboot</a>
+                    
+                    
+                    
+                    <a href="/tags/#hexo" title="hexo"
+                       rel="1">hexo</a>
+                    
+                    
+                </div>
+            </section>
+            
+
             
 
         </div>

@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        如何成功运行一个Vue项目｜nodesigle&#39;s blog
+        通过远程调用查天气｜nodesigle&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="https://nodesigle.github.io/2023/10/15/如何成功使用脚手架运行vue项目/">
+    <link rel="canonical" href="https://nodesigle.github.io/2023/10/19/远程调用/">
 
     <!-- Bootstrap Core CSS -->
     
@@ -159,18 +159,18 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>如何成功运行一个Vue项目</h1>
+                    <h1>通过远程调用查天气</h1>
                     
                     <span class="meta">
                          作者 nodesigle
                         <span>
-                          日期 2023-10-15
+                          日期 2023-10-19
                          </span>
                     </span>
                     <div class="tags text-center">
                         
-                        <a class="tag" href="/tags/#Vue"
-                           title="Vue">Vue</a>
+                        <a class="tag" href="/tags/#spirngboot"
+                           title="spirngboot">spirngboot</a>
                         
                         <br /><span id="busuanzi_container_page_pv" style="display:none;">阅读量：
                             <span id="busuanzi_value_page_pv"></span>次</span>
@@ -181,7 +181,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            如何成功运行一个Vue项目
+            通过远程调用查天气
         </span>
     </div>
 </header>
@@ -192,45 +192,30 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h2 id="1-安装Nodejs前端服务器"><a href="#1-安装Nodejs前端服务器" class="headerlink" title="1.安装Nodejs前端服务器"></a>1.安装Nodejs前端服务器</h2><ul>
-<li>Nodejs使用纯js代码写的前端服务器</li>
-<li>类似用java写的tomcat服务器一样</li>
-<li>进入<a target="_blank" rel="noopener" href="https://nodejs.cn/">nodejs官网</a>下载</li>
-</ul>
-<h2 id="2-Vue-CLI脚手架"><a href="#2-Vue-CLI脚手架" class="headerlink" title="2.Vue CLI脚手架"></a>2.Vue CLI脚手架</h2><h3 id="2-1什么是CLI"><a href="#2-1什么是CLI" class="headerlink" title="2.1什么是CLI"></a>2.1什么是CLI</h3><p>​		    CLI（command-line interface，<a target="_blank" rel="noopener" href="http://baike.baidu.com/view/5483485.htm">命令行界面</a>）是指可在<a target="_blank" rel="noopener" href="http://baike.baidu.com/view/200012.htm">用户</a>提示符下键入可执行指令的界面，它通常不支持鼠标，用户通过键盘输入指令，计算机接收到指令后，予以执行。</p>
-<h3 id="2-2什么是Vue-CLI"><a href="#2-2什么是Vue-CLI" class="headerlink" title="2.2什么是Vue CLI"></a>2.2什么是Vue CLI</h3><p>​		Vue CLI 是一个基于 Vue 进行快速项目开发的工具。它可以提供可交互式的项目<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E8%84%9A%E6%89%8B%E6%9E%B6&spm=1001.2101.3001.7020">脚手架</a>和运行时的服务依赖，帮助你快速完成一个风格统一、拓展性强的现代化 web 单页面应用。</p>
-<h3 id="2-3Vue-CLI主要优势"><a href="#2-3Vue-CLI主要优势" class="headerlink" title="2.3Vue CLI主要优势"></a>2.3Vue CLI主要优势</h3><ul>
-<li>通过 <span style="color:red">@vue&#x2F;cli</span> 实现的交互式的项目脚手架。</li>
-<li>一个丰富的官方插件集合，集成了前端生态中最好的工具。</li>
-<li>一套完全图形化的创建和管理 Vue.js 项目的用户界面。</li>
-</ul>
-<h3 id="2-4-Vue-CLI的安装"><a href="#2-4-Vue-CLI的安装" class="headerlink" title="2.4 Vue CLI的安装"></a>2.4 Vue CLI的安装</h3><ul>
-<li><p>安装</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">npm install -g @vue/cli </span><br></pre></td></tr></table></figure>
-
-<p><code>注意</code>:要事先安装好nodejs,如果运行很慢可以配置一些<code>npm镜像源</code>,例如,淘宝,豆瓣等等.</p>
+                <h2 id="远程调用"><a href="#远程调用" class="headerlink" title="远程调用"></a>远程调用</h2><p><strong>简称</strong>: <strong>RPC</strong>(<strong>Remote Procedure Call</strong>)</p>
+<h2 id="两种实现方式"><a href="#两种实现方式" class="headerlink" title="两种实现方式"></a>两种实现方式</h2><ul>
+<li><p><strong>webClient</strong></p>
+<p>非阻塞、响应式HTTP客户端</p>
 <ul>
-<li><p>查看vue脚手架是否安装成功</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">vue --version</span><br></pre></td></tr></table></figure>
+<li><p><strong>基于springboot的具体实现流程</strong></p>
+<p>首先写一个远程调用服务类(里面包含webClinet的链式调用),其次在controller中自动注入这个类,书写相关配置,通过浏览器发送请求查询天气.</p>
+<p>1.<strong>weatherService中的代码</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> Mono&lt;String&gt; <span class="title function_">getByWebClient</span><span class="params">(String city)</span>&#123;</span><br><span class="line">    <span class="comment">//远程调用阿里云API</span></span><br><span class="line">    <span class="comment">//1.创建WebClient</span></span><br><span class="line">    <span class="type">WebClient</span>  <span class="variable">client</span> <span class="operator">=</span> WebClient.create();</span><br><span class="line">    Map&lt;String,String&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">    map.put(<span class="string">&quot;area&quot;</span>,city);</span><br><span class="line">    <span class="comment">//2.定义发请求行为</span></span><br><span class="line">    Mono&lt;String&gt; mono = client.get()</span><br><span class="line">            .uri(<span class="string">&quot;https://ali-weather.showapi.com/area-to-weather-date?area=&#123;area&#125;&quot;</span>, map)</span><br><span class="line">            .accept(MediaType.APPLICATION_JSON) <span class="comment">//定义相应内容类型</span></span><br><span class="line">            .header(<span class="string">&quot;Authorization&quot;</span>, <span class="string">&quot;APPCODE 14c1acaed8ad4cd2be3d59e7d8f****&quot;</span>)                  <span class="comment">//在阿里云上买了相关服务就会有</span></span><br><span class="line">            .retrieve()</span><br><span class="line">            .bodyToMono(String.class);</span><br><span class="line">    <span class="keyword">return</span> mono;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>2.<strong>controller中的代码</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line">WeatherService weatherService;</span><br><span class="line"><span class="meta">@GetMapping(&quot;/weather&quot;)</span></span><br><span class="line"><span class="keyword">public</span> Mono&lt;String&gt; <span class="title function_">weather</span><span class="params">(<span class="meta">@RequestParam(&quot;city&quot;)</span> String city)</span>&#123;</span><br><span class="line">    Mono&lt;String&gt; weather = weatherService.getByWebClient(city);</span><br><span class="line">    <span class="keyword">return</span> weather;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>Http Interface</strong></p>
+<p>Spring 允许我们通过定义接口的方式，给任意位置发送 http 请求，实现远程调用，可以用来简化 HTTP 远程访问。需要WebFlux ( <strong>Spring Framework5.0 中引入的一种新的反应式Web框架</strong>)场景才可以.</p>
+<p>所以我们需要编写一个处理该天气服务的接口方法,然后使用HttpServiceProxyFactory创建接口的代理对象,从而实现相关服务.</p>
 <ul>
-<li><p>如果有相应的版本号,则代表安装成功,卸载可以使用一下命令</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">npm uninstall -g vue/cli</span><br></pre></td></tr></table></figure></li>
-</ul>
+<li><p><strong>具体实现代码</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//controller中的代码</span></span><br><span class="line">  <span class="meta">@Autowired</span></span><br><span class="line">  WeatherService weatherService;</span><br><span class="line">  <span class="meta">@GetMapping(&quot;/weather&quot;)</span></span><br><span class="line">  <span class="keyword">public</span> Mono&lt;String&gt; <span class="title function_">weather</span><span class="params">(<span class="meta">@RequestParam(&quot;city&quot;)</span> String city)</span>&#123;</span><br><span class="line">      Mono&lt;String&gt; weather = weatherService.weather(city);</span><br><span class="line">      <span class="keyword">return</span> weather;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//weatherInterface中的代码</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">WeatherInterface</span> &#123;</span><br><span class="line">    <span class="meta">@GetExchange(url = &quot;https://ali-weather.showapi.com/area-to-weather-date&quot;,accept = &quot;application/json&quot;)</span></span><br><span class="line">    Mono&lt;String&gt; <span class="title function_">getWeather</span><span class="params">(<span class="meta">@RequestParam(&quot;area&quot;)</span> String city)</span>;<span class="comment">//这里的RequestParam的意思是将传过来的参数,通过注解中的key传到url上</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//编写实现该接口的代理对象weatherService(具体代码)</span></span><br><span class="line">   <span class="meta">@Autowired</span></span><br><span class="line">    WeatherInterface weatherClient;</span><br><span class="line">    <span class="keyword">public</span> Mono&lt;String&gt; <span class="title function_">weather</span><span class="params">(String city)</span>&#123;</span><br><span class="line">        <span class="type">WebClient</span> <span class="variable">client1</span> <span class="operator">=</span> WebClient.builder() String apiCode)</span><br><span class="line">                .defaultHeader(<span class="string">&quot;Authorization&quot;</span>,<span class="string">&quot;APPCODE *****&quot;</span>)<span class="comment">//这个地方可以写在配置文件中,这里是写死</span></span><br><span class="line">                .codecs(clientCodecConfigurer -&gt; &#123;</span><br><span class="line">                    clientCodecConfigurer</span><br><span class="line">                            .defaultCodecs()</span><br><span class="line">                            .maxInMemorySize(<span class="number">256</span> * <span class="number">1024</span> * <span class="number">1024</span>);</span><br><span class="line">                &#125;).build();</span><br><span class="line">        <span class="comment">//创建工厂</span></span><br><span class="line">        <span class="type">HttpServiceProxyFactory</span> <span class="variable">factory</span> <span class="operator">=</span> HttpServiceProxyFactory.builder(WebClientAdapter.forClient(client1)).build();</span><br><span class="line">         <span class="comment">//创建代理对象</span></span><br><span class="line">        <span class="type">WeatherInterface</span> <span class="variable">weatherAPI</span> <span class="operator">=</span> factory.createClient(WeatherInterface.class);</span><br><span class="line">        Mono&lt;String&gt; weather = weatherAPI.getWeather(city);</span><br><span class="line">        <span class="keyword">return</span> weather;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>优化</strong> : 我们可以写抽取出以上的公共代码写一个专门的代理配置类,用于实现各种远程调用</p>
 </li>
 </ul>
-</li>
-<li><p>新建一个vue项目</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">vue create your-project-name</span><br></pre></td></tr></table></figure>
-
-<p>在命令行执行期间,如遇暂停一律enter&#x2F;Y</p>
-<p><img src="https://raw.githubusercontent.com/nodesigle/image-hosting/main/image-20231017162459071.png"></p>
-</li>
-<li><p>运行项目</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">npm <span class="built_in">start</span></span><br></pre></td></tr></table></figure>
-
-<p><code>注意</code>一定要在项目的根路径下使用该命令成功之后会有相应启动网址</p>
-<p><img src="https://raw.githubusercontent.com/nodesigle/image-hosting/main/image-20231017163117301.png"></p>
 </li>
 </ul>
 
@@ -239,11 +224,11 @@
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2023/10/18/小白如何成功部署hexo博客/" data-toggle="tooltip" data-placement="top"
-                           title="小白如何成功部署hexo博客">&larr; Previous Post</a>
-                    </li>
                     
+                    <li class="next">
+                        <a href="/2023/10/18/小白如何成功部署hexo博客/" data-toggle="tooltip" data-placement="top"
+                           title="小白如何成功部署hexo博客">Next Post &rarr;</a>
+                    </li>
                     
                 </ul>
 
@@ -261,7 +246,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85Nodejs%E5%89%8D%E7%AB%AF%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">1.安装Nodejs前端服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Vue-CLI%E8%84%9A%E6%89%8B%E6%9E%B6"><span class="toc-text">2.Vue CLI脚手架</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1%E4%BB%80%E4%B9%88%E6%98%AFCLI"><span class="toc-text">2.1什么是CLI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2%E4%BB%80%E4%B9%88%E6%98%AFVue-CLI"><span class="toc-text">2.2什么是Vue CLI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3Vue-CLI%E4%B8%BB%E8%A6%81%E4%BC%98%E5%8A%BF"><span class="toc-text">2.3Vue CLI主要优势</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-Vue-CLI%E7%9A%84%E5%AE%89%E8%A3%85"><span class="toc-text">2.4 Vue CLI的安装</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8"><span class="toc-text">远程调用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%A4%E7%A7%8D%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F"><span class="toc-text">两种实现方式</span></a></li></ol>
                 </div>
             </div>
         </div>
@@ -283,8 +268,8 @@
                     </h5>
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#Vue"
-                           title="Vue">Vue</a>
+                        <a class="tag" href="/tags/#spirngboot"
+                           title="spirngboot">spirngboot</a>
                         
                     </div>
                 </section>

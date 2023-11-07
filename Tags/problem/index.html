@@ -22,7 +22,7 @@
         
     </title>
 
-    <link rel="canonical" href="https://nodesigle.github.io/">
+    <link rel="canonical" href="https://nodesigle.github.io/tags/problem/">
 
     <!-- Bootstrap Core CSS -->
     
@@ -49,8 +49,8 @@
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="" class="animated fadeIn">
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "false" data-istags="false
-" data-ishome = "true" >
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "false" data-istags="true
+" data-ishome = "false" >
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
@@ -139,126 +139,6 @@
 <!-- Main Content -->
 
 
-<style>
-
-    .custom-haojen-container .post-preview:nth-of-type(1),
-    .custom-haojen-container .post-preview-poetry:nth-of-type(1) {
-        text-align: center;
-        background-repeat: no-repeat;
-        border-radius: 3px;
-        background-size: cover;
-        padding: 0;
-        height: 300px;
-        display: table;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.16);
-    }
-
-    /*去掉诗歌的背景图片*/
-    .custom-haojen-container .post-preview-poetry:nth-of-type(1) {
-        background-image: none !important;
-        background-color: rgba(255, 248, 220, 0.5);
-    }
-
-    .custom-haojen-container .post-preview:nth-child(1) h2,
-    .custom-haojen-container .post-preview:nth-child(1) .post-meta,
-    .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
-        text-shadow: 0 0 40px rgba(0, 0, 0, 1);
-        letter-spacing: 1px;
-        color: #fff;
-        margin-top: 0;
-        padding-left: 60px;
-        padding-right: 60px;
-    }
-
-    .custom-haojen-container .post-preview:nth-child(1) .post-meta {
-        font-size: .9em;
-        font-weight: 300;
-        margin-top: 0;
-    }
-
-    .custom-haojen-container .post-preview-poetry:nth-child(1) .post-subtitle {
-        letter-spacing: 6px;
-        font-size: 18px;
-        font-family: unset;
-        font-weight: 400;
-        color: rgba(0, 0, 0, .75)
-    }
-
-    /*不显示摘要*/
-    .custom-haojen-container .post-preview:nth-child(1) .post-content-preview {
-        display: none
-    }
-
-    /*只第一个显示背景图片*/
-    .custom-haojen-container .post-preview:not(:nth-child(1)) {
-        background-image: none !important;
-    }
-
-    /*第一个分界线去掉*/
-    .custom-haojen-container hr:nth-of-type(1) {
-        display: none;
-    }
-
-    /*主题*/
-    .custom-haojen-container .post-preview:nth-of-type(1) > a {
-        display: table-cell;
-        vertical-align: middle;
-    }
-
-    /*诗词标题*/
-    .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
-        font-size: 35px;
-        font-family: STKaiti;
-        color: rgba(0, 0, 0, .8);
-    }
-
-    .custom-haojen-container .post-preview-poetry:nth-of-type(1) .post-meta {
-        color: #0e2231;
-    }
-
-    @media (max-width: 768px) {
-        .custom-haojen-container .post-preview:nth-child(1) {
-            height: 240px;
-        }
-
-        .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
-            font-size: 28px !important;
-            margin-top: 0;
-        }
-
-        .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
-            font-size: 18px;
-            font-weight: 400;
-            padding-left: 0;
-            padding-right: 0;
-        }
-
-        .custom-haojen-container .post-preview:nth-of-type(1) > a {
-            padding: 20px
-        }
-    }
-
-    /*手机屏幕*/
-    @media (max-width: 400px) {
-        .custom-haojen-container .post-preview:nth-child(1) {
-            height: 195px;
-        }
-
-        .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
-            font-size: 20px !important;
-        }
-
-        .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
-            font-size: 16px;
-        }
-
-        .custom-haojen-container .post-preview:nth-child(1) a {
-            padding: 30px 20px;
-        }
-    }
-</style>
-
 <!-- Page Header -->
 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 visible-xs-block visible-sm-block">
     <div class="row">
@@ -304,96 +184,6 @@ ieal 报can not find vm options file 导致不能配置jvm的语言环境
 
 
 
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-<div class="post-preview "
-     style="background-image: url('https://raw.githubusercontent.com/nodesigle/image-hosting/main/nodePic.jpg')">
-    <a href="/2023/10/19/远程调用/">
-        <h2 class="post-title">
-            通过远程调用查天气
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2023-10-19
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                远程调用简称: RPC(Remote Procedure Call)
-两种实现方式
-webClient
-非阻塞、响应式HTTP客户端
-
-基于springboot的具体实现流程
-首先写一个远程调用服务类(里面包含webClinet的链式调用),其次在controller中自动注入这个类,书写相关配..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-<div class="post-preview "
-     style="background-image: url('https://raw.githubusercontent.com/nodesigle/image-hosting/main/nodePic.jpg')">
-    <a href="/2023/10/18/小白如何成功部署hexo博客/">
-        <h2 class="post-title">
-            小白如何成功部署hexo博客
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2023-10-18
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                1.前提
-需要nodejs服务器和npm包管理工具
-
-通过命令行输入
-node -vnpm -v
-
-查看到当前版本,则表示已经安装好了,如果没有安装,去Node.js 中文网 下载对应的安装包或者安装应用程序,配置相应的环境变量
-
-
-2.安装hexo博客框架
-配置镜像源,加快下载速度,配置好了,..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-<div class="post-preview "
-     style="background-image: url('https://raw.githubusercontent.com/nodesigle/image-hosting/main/nodePic.jpg')">
-    <a href="/2023/10/15/如何成功使用脚手架运行vue项目/">
-        <h2 class="post-title">
-            如何成功运行一个Vue项目
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2023-10-15
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                1.安装Nodejs前端服务器
-Nodejs使用纯js代码写的前端服务器
-类似用java写的tomcat服务器一样
-进入nodejs官网下载
-
-2.Vue CLI脚手架2.1什么是CLI​		    CLI（command-line interface，命令行界面）是指可在用户提示符下键入可执行..
             </p>
         </div>
     </a>
